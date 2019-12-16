@@ -102,3 +102,14 @@ window.addEventListener('load', function(){
   alert('Loading...Loading...Loading.....Loaded :)')
 })
 
+let buttons = document.querySelectorAll('div.btn')
+console.log(buttons)
+buttons.forEach(function(button) {
+  button.addEventListener('dblclick', function(event) {
+    event.target.style.backgroundColor = 'red'
+    event.target.style.transform = 'rotate(360deg)'
+  })
+  button.addEventListener('mouseenter', function(event) {
+    event.target.style.transform = 'rotate(180deg)'
+  })
+})
